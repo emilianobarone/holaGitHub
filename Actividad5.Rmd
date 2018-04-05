@@ -1,0 +1,36 @@
+---
+title: "Actividad 5"
+author: "Emiliano Barone y Maria Noel Blanco"
+date: "2 de abril de 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Incluir imagen
+(![Recoba y Pacheco](recoba-pacheco.jpg))
+
+La imagen representa la amistad a pesar de las diferencias de colores
+
+## Chunck con codigo de R
+```{r, fig.width=5, fig.height=5, echo=TRUE}
+library("ggplot2")
+ggplot(data=mpg, aes(x=cty, y= hwy))+
+        labs(x="Millas por galon ciudad",y="Millas por galon carretera", title="Millas por galon ciudad vs carretera")+
+  geom_point()
+```
+
+## Incluir una tabla
+```{r, warning= FALSE, message=FALSE, results='asis'}
+library("xtable")
+xtable(mpg[1:5, 1:5])
+
+
+```
+
+
+
+
+
